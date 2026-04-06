@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", ui-serif, Georgia, serif;
+
+  --color-iow-deep-oak: #2d241e;
+  --color-iow-terracotta: #a67c52;
+  --color-iow-sand: #e5d3c0;
+  --color-iow-linen: #f9f5f1;
+  --color-iow-clay: #7c6a5a;
+  --color-iow-bronze: #c5a07d;
+  --color-iow-earth: #4a3f35;
+}
+
+@layer base {
+  body {
+    @apply bg-iow-linen text-iow-deep-oak font-sans antialiased selection:bg-iow-terracotta selection:text-white;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+.glass {
+  @apply bg-iow-deep-oak/20 backdrop-blur-xl border border-white/10 shadow-[0_8px_32px_0_rgba(31,38,135,0.1)];
+}
+
+.editorial-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.5rem;
+}
