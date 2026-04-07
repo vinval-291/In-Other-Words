@@ -173,8 +173,8 @@ const About = () => {
             <h2 className="text-4xl md:text-5xl font-serif mb-8 leading-tight">
               A quiet, intentional gathering where people come together to read, reflect, and share in their own words.
             </h2>
-            <p className="text-iow-clay text-lg leading-relaxed mb-8">
-              In a world that demands constant noise, we choose silence. In a world of fast scrolls, we choose slow pages. IOW is a sanctuary for the modern mind, blending the solitude of reading with the warmth of human presence.
+            <p className="text-iow-earth text-lg leading-relaxed mb-8">
+              In a world that demands constant noise, we choose silence. In a world of fast scrolls, we choose slow pages. In Other Words (IOW) is a sanctuary for the modern mind, blending the solitude of reading with the warmth of human presence.
             </p>
           </motion.div>
           <motion.div
@@ -215,7 +215,7 @@ const WhyExists = () => {
             viewport={{ once: true }}
             className="text-4xl md:text-6xl font-serif mb-6"
           >
-            Why IOW Exists
+            Why In Other Words Exists
           </motion.h2>
           <div className="w-24 h-px bg-iow-terracotta mx-auto" />
         </div>
@@ -302,7 +302,7 @@ const Experience = () => {
             <span className="text-iow-terracotta text-sm font-semibold tracking-[0.3em] uppercase block mb-4">The Experience</span>
             <h2 className="text-4xl md:text-5xl font-serif">Curated moments of human resonance.</h2>
           </div>
-          <p className="text-iow-clay max-w-sm">Every gathering is designed to facilitate ease, respect, and discovery.</p>
+          <p className="text-iow-earth max-w-sm">Every gathering is designed to facilitate ease, respect, and discovery.</p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -351,7 +351,7 @@ const Rhythms = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-6xl font-serif mb-6">Reading Rhythms</h2>
-          <p className="text-iow-clay max-w-xl mx-auto">Choose a pace that honors your lifestyle and your curiosity.</p>
+          <p className="text-iow-earth max-w-xl mx-auto">Choose a pace that honors your lifestyle and your curiosity.</p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
@@ -365,16 +365,16 @@ const Rhythms = () => {
               whileHover={{ y: -10 }}
               className={`p-12 rounded-[2.5rem] transition-all duration-500 glass ${
                 r.featured 
-                ? "bg-iow-deep-oak text-iow-linen shadow-2xl scale-105 z-10" 
+                ? "bg-white text-iow-deep-oak shadow-2xl scale-105 z-10 border-2 border-iow-terracotta/20" 
                 : "bg-white/40 border border-iow-sand/30 text-iow-deep-oak hover:shadow-xl"
               }`}
             >
               <div className={`${r.featured ? "text-iow-terracotta" : "text-iow-terracotta"} mb-8`}>{r.icon}</div>
-              <h3 className="text-3xl font-serif mb-2">{r.name}</h3>
-              <p className={`text-sm font-semibold tracking-widest uppercase mb-6 ${r.featured ? "text-iow-terracotta" : "text-iow-clay"}`}>
+              <h3 className={`text-3xl font-serif mb-2 ${r.featured ? "text-iow-deep-oak" : ""}`}>{r.name}</h3>
+              <p className={`text-sm font-semibold tracking-widest uppercase mb-6 ${r.featured ? "text-iow-terracotta" : "text-iow-earth"}`}>
                 {r.pace}
               </p>
-              <p className={`leading-relaxed mb-10 ${r.featured ? "text-iow-sand/80" : "text-iow-clay"}`}>
+              <p className={`leading-relaxed mb-10 ${r.featured ? "text-black" : "text-iow-earth"}`}>
                 {r.desc}
               </p>
               <motion.a
@@ -383,7 +383,7 @@ const Rhythms = () => {
                 rel="noopener noreferrer"
                 className={`block text-center w-full py-4 rounded-full text-sm font-bold tracking-widest uppercase transition-all ${
                   r.featured 
-                  ? "bg-iow-linen text-iow-deep-oak hover:bg-white" 
+                  ? "bg-iow-deep-oak text-iow-linen hover:bg-iow-terracotta" 
                   : "bg-iow-deep-oak text-iow-linen hover:bg-iow-terracotta"
                 }`}
               >
@@ -496,7 +496,7 @@ const Contact = () => {
             <h2 className="text-4xl md:text-5xl font-serif mb-8 leading-tight">
               We'd love to hear from you.
             </h2>
-            <p className="text-iow-clay text-lg leading-relaxed mb-8">
+            <p className="text-iow-earth text-lg leading-relaxed mb-8">
               Have questions about our reading rhythms, want to host a gathering, or just want to say hi? Send us a message and we'll get back to you soon.
             </p>
             
@@ -612,7 +612,7 @@ const CTA = () => {
             <span className="italic">other words?</span>
           </h2>
           <p className="text-iow-sand/70 text-lg mb-12 max-w-xl mx-auto">
-            Join our next gathering and experience the quiet luxury of intentional connection.
+            Join our next gathering and experience the quiet luxury of intentional connection <span className="italic">In Other Words.</span>
           </p>
           <motion.a
             href={WHATSAPP_LINK}
@@ -667,7 +667,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-12 mb-20">
           <div className="col-span-2">
             <h2 className="text-3xl font-serif mb-6">In Other Words</h2>
-            <p className="text-iow-clay max-w-sm mb-8">
+            <p className="text-iow-earth max-w-sm mb-8">
               A quiet luxury digital experience for the modern reader. Cultivating depth in an age of distraction.
             </p>
             <div className="flex space-x-6">
