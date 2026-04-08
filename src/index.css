@@ -16,7 +16,7 @@
 
 @layer base {
   body {
-    @apply bg-iow-linen text-iow-deep-oak font-sans antialiased selection:bg-iow-terracotta selection:text-white;
+    @apply bg-iow-linen text-iow-deep-oak font-sans antialiased selection:bg-iow-terracotta selection:text-white transition-colors duration-500;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -25,7 +25,7 @@
 }
 
 .glass {
-  @apply bg-iow-deep-oak/20 backdrop-blur-xl border border-white/10 shadow-[0_8px_32px_0_rgba(31,38,135,0.1)];
+  @apply bg-iow-deep-oak/20 backdrop-blur-xl border border-white/10 shadow-[0_8px_32px_0_rgba(31,38,135,0.1)] transition-all duration-500;
 }
 
 .editorial-grid {

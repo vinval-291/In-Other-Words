@@ -57,11 +57,16 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <motion.div 
-          className="text-2xl font-serif font-semibold tracking-tighter cursor-pointer"
+          className="cursor-pointer"
           whileHover={{ scale: 1.02 }}
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         >
-          IOW
+          <img 
+            src="https://i.postimg.cc/3NRFwwGN/In-Other-Words-Logo-(1).png" 
+            alt="In Other Words Logo" 
+            className="h-12 w-auto"
+            referrerPolicy="no-referrer"
+          />
         </motion.div>
         <div className="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest">
           {[
@@ -666,7 +671,12 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-4 gap-12 mb-20">
           <div className="col-span-2">
-            <h2 className="text-3xl font-serif mb-6">In Other Words</h2>
+            <img 
+              src="https://i.postimg.cc/3NRFwwGN/In-Other-Words-Logo-(1).png" 
+              alt="In Other Words Logo" 
+              className="h-16 w-auto mb-6"
+              referrerPolicy="no-referrer"
+            />
             <p className="text-iow-earth max-w-sm mb-8">
               A quiet luxury digital experience for the modern reader. Cultivating depth in an age of distraction.
             </p>
