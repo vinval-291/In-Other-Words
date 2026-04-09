@@ -467,12 +467,12 @@ const Contact = () => {
     setStatus("loading");
     
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch("https://formspree.io/f/xreorwly", {
         method: "POST",
+        body: data,
         headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(Object.fromEntries(data))
+          'Accept': 'application/json'
+        }
       });
       
       if (response.ok) {
@@ -645,9 +645,9 @@ const Footer = () => {
     
     setStatus("loading");
     try {
-      const response = await fetch("/api/subscribe", {
+      const response = await fetch("https://formspree.io/f/xreorwly", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
         body: JSON.stringify({ email }),
       });
 
@@ -656,12 +656,10 @@ const Footer = () => {
         setEmail("");
         setTimeout(() => setStatus("idle"), 5000);
       } else {
-        const data = await response.json();
-        throw new Error(data.error || "Failed to subscribe");
+        throw new Error("Failed to subscribe");
       }
     } catch (error) {
       console.error("Subscription error:", error);
-      alert("Failed to subscribe. Please ensure GMAIL_USER and GMAIL_APP_PASSWORD are configured correctly in the environment.");
       setStatus("idle");
     }
   };
