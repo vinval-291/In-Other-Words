@@ -467,12 +467,12 @@ const Contact = () => {
     setStatus("loading");
     
     try {
-      const response = await fetch("https://formspree.io/f/xreorwly", {
+      const response = await fetch("/api/contact", {
         method: "POST",
-        body: data,
         headers: {
-          'Accept': 'application/json'
-        }
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(Object.fromEntries(data))
       });
       
       if (response.ok) {
